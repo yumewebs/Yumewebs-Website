@@ -1,0 +1,15 @@
+{% extends 'website/layout.html' %}
+
+{% block title %}Contact{% endblock %}
+
+
+{% block li %}
+<li id="btn-home" class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+<li id="btn-works" class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Works</a></li>
+<li id="btn-services" class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+<li id="btn-contact" class="nav-item"><a class="nav-link active" href="{% url 'contact' %}">Contact</a></li>
+{% endblock %}
+
+{% block body %}
+    <h1>Contact us</h1>
+{% endblock %}

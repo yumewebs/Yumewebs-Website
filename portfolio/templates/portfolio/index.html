@@ -1,0 +1,137 @@
+{% extends 'website/layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block li %}
+<li id="btn-home" class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+<li id="btn-works" class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Works</a></li>
+<li id="btn-services" class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+<li id="btn-contact" class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+{% endblock %}
+
+{% block body %}
+<section id="home" class="height_vh">
+    <div class="container">
+        <div class="row d-flex align-items-center height_vh">
+            <div class="col-md-12 col-12">
+                <div class="banner_content">
+                    <h1 class="banner_title"> YUME <br> WEBS </h1>
+                    <h1 class="banner_title2"> YUMEWEBS</h1>
+                    <ul class="exp_list">
+                        <li>
+                            Web Development
+                        </li>
+                        <span class="barrita" style="color: #ff3366;">/</span>
+                        <li>
+                            Web Design
+                        </li>
+                        <span class="barrita" style="color: #ff3366;">/</span>
+                        <li>
+                            Programming
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="social_link">
+        <li>
+            <a href="https://www.facebook.com/YumeWebs">
+                {% load static %}
+                <img src="/static/img/facebook.png" height="20px" alt="Facebook">
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/yumewebs">
+                {% load static %}
+                <img src="/static/img/github.png" height="20px" alt="GitHub">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.quora.com/profile/Miguel-Payá">
+                {% load static %}
+                <img src="/static/img/quora.png" height="20px" alt="Quora">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/yumewebs/">
+                {% load static %}
+                <img src="/static/img/instagram.png" height="20px" alt="Instagram">
+            </a>
+        </li>
+    </ul>
+    <div class="scroll_down">
+        <a href="#portfolio" class="smooth">Scroll Down</a>
+    </div>
+</section>
+<!--Section Ends-->
+<div style="clear: both;" class="clearfix"></div>
+
+<!--Section starts-->
+<section id="portfolio">
+    <h1>Works</h1>
+    <div class="container">
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-sm-4 p-5 portf">
+                <div class="portf-img">
+                    <img src="{{project.image.url}}" alt="">
+                </div>
+                <div class="portf-banner">
+                    <div class="portf-title">
+                        <h3>{{project.title}}</h3>
+                    </div>
+                    <div class="portf-info">
+                        <p><span class="barrita" style="color: #ff3366;">/</span> {{project.subtitle}}</p>
+                    </div>
+                </div>
+                <div class="portf-explore">
+                    <a class="exp" href="/">
+                        <span class="exp-inner">
+                            <span class="portf-link">
+                                Explore
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--Section Ends-->
+
+<!--Section Starts-->
+<section id="about">
+    <div class="container">
+        <h1>About</h1>
+        <div class="about">
+            <h2><span class="rosa">- </span>About us</h2>
+            <p>Yumewebs is a <span class="pink">web development company.</span> Our team are experts in web design and web development. Using the
+                latest technologies, we create personalized and tailored websites to improve the user experience and
+                convert them into customers.</p>
+        </div>
+    </div>
+</section>
+<!--Section Ends-->
+
+<!--Section Starts-->
+
+<section id="how">
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="row">
+            <div class="col-6">
+
+            </div>
+            <div class="col-6">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Section Ends-->
+
+{% endblock %}

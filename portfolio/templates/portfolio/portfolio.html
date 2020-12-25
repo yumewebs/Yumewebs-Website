@@ -1,0 +1,56 @@
+{% extends 'website/layout.html' %}
+
+{% block title %}Works{% endblock %}
+
+
+{% block li %}
+<li id="btn-home" class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+<li id="btn-works" class="nav-item"><a class="nav-link active" href="{% url 'portfolio' %}">Works</a></li>
+<li id="btn-services" class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+<li id="btn-contact" class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+{% endblock %}
+
+{% block body %}
+<section id="works" style="background-image: url(/static/img/bgSub.jpg); height:50vh;">
+    <div class="container">
+        <h1 style="line-height: 50vh; font-size: 140px;">WORKS</h1>
+    </div>
+</section>
+<!--Section Ends-->
+<div style="clear: both;" class="clearfix"></div>
+
+<!--Section starts-->
+<section id="portfolio">
+    <h1 style="-webkit-text-stroke: 2px rgb(109, 109, 109); margin-bottom: 0px;">Works</h1>
+    <div class="container">
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-sm-6 p-5 portf">
+                <div class="portf-img">
+                    <img src="{{project.image.url}}" alt="">
+                </div>
+                <div class="portf-banner">
+                    <div class="portf-title">
+                        <h3>{{project.title}}</h3>
+                    </div>
+                    <div class="portf-info">
+                        <p><span class="barrita" style="color: #ff3366;">/</span> {{project.subtitle}}</p>
+                    </div>
+                </div>
+                <div class="portf-explore">
+                    <a class="exp" href="/">
+                        <span class="exp-inner">
+                            <span class="portf-link">
+                                Explore
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--Section Ends-->
+
+{% endblock %}

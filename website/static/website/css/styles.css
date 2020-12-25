@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif !important;
+    overflow: -moz-hidden-unscrollable;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif !important;
+    color: white !important;
+}
+
+@media(max-width:575px)
+{
+    body
+    {
+        width: fit-content;
+    }
+}
+
+#img_logo
+{
+    margin-top: 15px;
+    height: 75px;
+}
+
+.header
+{
+    background-color: transparent;
+    color: white;
+    z-index: 1080;
+    width: 100%;
+    display: block;
+    position: fixed;
+}
+
+.headerchange
+{
+    background-color: transparent;
+    color: white;
+    z-index: 1080;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+
+
+#navbar ul li a
+{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: none;
+    padding-right: 1.5em;
+    cursor: pointer;
+    padding-left: 1.5em;
+    background-image: linear-gradient(#ff3366, #ff3366);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .5s;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a:focus
+{
+    background-size: 100% 2px;
+}
+
+#navbar ul li .active
+{
+    transition: all 300ms;
+    border-bottom: 2px solid #ff3366;
+}
+
+#navbar ul li .active:hover,
+#navbar ul:hover .active
+{
+    border-bottom: 0px solid transparent;
+}
+
+
+#header .navbar img
+{
+    padding-top: 5px;
+}
+
+#boton-nav img:hover{
+    color: #ff3366;
+}
+
+/* EFECTO HOVER EN LETRAS */
+
+/* SUBHEADER */
